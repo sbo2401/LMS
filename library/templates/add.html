@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/static/css/style.css">
+<body class="add">
+<h1>Add Student</h1>
+<form action="addrecord/" method="post">
+{% csrf_token %}
+<label for="surname">Surname</label><br>
+<input type="text" id="fname" name="fname" placeholder="Oladunjoye" required><br><br>
+
+<label for="firstname">First Name</label><br>
+<input type="text" id="mname" name="mname" placeholder="Sulaiman" required><br><br>
+
+<label for="lastname">Last Name</label><br>
+<input type="text" id="lname" name="lname" placeholder="Olasubomi" required><br><br>
+
+<input type="submit" value="Submit" class="submit">
+</form>
+</body>
+</head>
+</html>
