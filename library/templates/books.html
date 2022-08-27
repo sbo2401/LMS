@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/static/css/style.css">
+
+<h1>Book's List</h1>
+<table>
+{% for x in book %}
+<tr>
+<td>{{ x.id }}</td>
+<td>{{ x.Title }}</td>
+<td>{{x.Author}}</td>
+<td>{{ x.Publisher}}</td>
+<td>{{x.Year}}</td>
+<td>${{x.Price}}</td>
+</tr>
+{% endfor %}
+</table>
+
+<p class="member">
+    <a href="addbook/">Add BooK</a>
+</p>
+</head>
+</html>

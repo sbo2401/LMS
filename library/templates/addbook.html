@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/static/css/style.css">
+<body class="add">
+<h1>Add Student</h1>
+<form action="todb/" method="post">
+{% csrf_token %}
+<label for="Title">Title</label><br>
+<input type="text" id="title" name="title" placeholder="Selma" required><br><br>
+
+<label for="Author">Author</label><br>
+<input type="text" id="author" name="author" placeholder="Chinua AChebe" required><br><br>
+
+<label for="publisher">Publisher</label><br>
+<input type="text" id="pub" name="publisher" placeholder="Lantern Books" required><br><br>
+
+<label for="year">Year</label><br>
+<input type="text" id="year" name="year" size="4" maxlength="4" placeholder="1900" required><br><br>
+
+<label for="price">Price</label><br>
+<input type="text" id="price" name="price" placeholder="250" required><br><br>
+
+<input type="submit" value="Submit" class="submit">
+</form>
+</body>
+</head>
+</html>

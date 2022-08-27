@@ -45,7 +45,6 @@ td{
     background-position: center;
     background-size: cover;
 }
-
 .add h1{
     color:rgb(55, 161, 126);
     font-family:'Courier New', Courier, monospace
@@ -56,6 +55,7 @@ label {
     display: inline-block;
   }
 .add input[type=text]{
+    width: 500px !important;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
