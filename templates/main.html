@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/static/css/style.css">
+<body>
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="class" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+    <h1>Student Name</h1>
+
+    {% if user.is_authenticated %}
+    <h3>Hello {{ lname }}</h3>
+    <h4>You are successfully logged in</h4>
+    {% else %}
+    {% endif %}
+    <table>
+    {% for x in student %}
+    <tr>
+    <td>{{ x.id }}</td>
+    <td>{{ x.surname }}</td>
+    <td>{{x.firstname}}</td>
+    <td>{{ x.lastname }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</head>
+</html>

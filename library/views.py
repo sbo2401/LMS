@@ -43,7 +43,8 @@ def signin(request):
     
     if user is not None:
       login(request, user)
-      return redirect('user')
+      lname=user.last_name
+      return render(request, 'main.html' , {'lname':lname})
     else:
       messages.error(request, "Details not found")
       return redirect('home')
